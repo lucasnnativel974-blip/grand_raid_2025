@@ -1,0 +1,163 @@
+/* ==========================
+   STYLE GRAND RAID
+   ========================== */
+
+/* Couleurs principales */
+:root {
+    --vert-raid: #5b8e2d;
+    --jaune-raid: #f9d71c;
+    --rouge-raid: #d71a28;
+    --bleu-raid: #1b2c7a;
+}
+
+/* ==========================
+   BASE
+   ========================== */
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: var(--vert-raid);
+    font-weight: 700;
+}
+
+/* ==========================
+   NAVBAR
+   ========================== */
+.navbar {
+    background-color: var(--vert-raid);
+    border-bottom: 5px solid var(--rouge-raid);
+}
+
+.navbar-brand {
+    color: var(--jaune-raid) !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--jaune-raid) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--bleu-raid);
+}
+
+/* ==========================
+   SECTIONS
+   ========================== */
+section {
+    padding: 80px 0;
+}
+
+section.bg-light {
+    background-color: #f8f9fa;
+}
+
+/* ==========================
+   BOUTONS
+   ========================== */
+.btn-raid {
+    background-color: var(--rouge-raid);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn-raid:hover {
+    background-color: var(--bleu-raid);
+}
+
+/* ==========================
+   FORMULAIRE
+   ========================== */
+form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form .form-control:focus {
+    border-color: var(--bleu-raid);
+    box-shadow: 0 0 0 0.2rem rgba(27, 44, 122, 0.2);
+}
+
+/* ==========================
+   MEDIA QUERIES
+   ========================== */
+
+/* --- Petits écrans (mobile) --- */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .btn-raid {
+        width: 100%;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+/* --- Moyens écrans (tablettes) --- */
+@media (min-width: 577px) and (max-width: 992px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    iframe {
+        height: 350px;
+    }
+}
+
+/* --- Grands écrans (ordinateurs) --- */
+@media (min-width: 993px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    iframe {
+        height: 500px;
+    }
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+    background: linear-gradient(
+        90deg,
+        var(--vert-raid) 0%,
+        var(--jaune-raid) 25%,
+        var(--rouge-raid) 50%,
+        var(--bleu-raid) 75%
+    );
+    color: #fff;
+}
