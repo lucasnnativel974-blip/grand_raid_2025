@@ -8,6 +8,8 @@
     --jaune-raid: #f9d71c;
     --rouge-raid: #d71a28;
     --bleu-raid: #1b2c7a;
+    --gris-clair: #f8f9fa;
+    --texte-principal: #333;
 }
 
 /* ==========================
@@ -15,15 +17,23 @@
    ========================== */
 body {
     background-color: #ffffff;
-    color: #333;
+    color: var(--texte-principal);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 h2 {
     color: var(--vert-raid);
     font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: var(--rouge-raid);
 }
 
 /* ==========================
@@ -32,6 +42,7 @@ h2 {
 .navbar {
     background-color: var(--vert-raid);
     border-bottom: 5px solid var(--rouge-raid);
+    transition: all 0.3s ease;
 }
 
 .navbar-brand {
@@ -59,10 +70,17 @@ h2 {
    ========================== */
 section {
     padding: 80px 0;
+    transition: all 0.5s ease;
 }
 
 section.bg-light {
-    background-color: #f8f9fa;
+    background-color: var(--gris-clair);
+}
+
+section p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
 }
 
 /* ==========================
@@ -72,27 +90,70 @@ section.bg-light {
     background-color: var(--rouge-raid);
     color: #fff;
     border: none;
-    padding: 10px 25px;
+    padding: 12px 30px;
     font-weight: 600;
-    transition: 0.3s ease;
-    border-radius: 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(215, 26, 40, 0.4);
 }
 
 .btn-raid:hover {
     background-color: var(--bleu-raid);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(27, 44, 122, 0.5);
 }
 
 /* ==========================
    FORMULAIRE
    ========================== */
 form .form-control {
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 form .form-control:focus {
     border-color: var(--bleu-raid);
-    box-shadow: 0 0 0 0.2rem rgba(27, 44, 122, 0.2);
+    box-shadow: 0 0 10px rgba(27, 44, 122, 0.2);
+    outline: none;
+}
+
+/* ==========================
+   IFRAME
+   ========================== */
+iframe {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+    background: linear-gradient(
+        90deg,
+        var(--vert-raid) 0%,
+        var(--jaune-raid) 25%,
+        var(--rouge-raid) 50%,
+        var(--bleu-raid) 75%
+    );
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
 }
 
 /* ==========================
@@ -146,18 +207,4 @@ form .form-control:focus {
     iframe {
         height: 500px;
     }
-}
-
-/* ==========================
-   FOOTER
-   ========================== */
-footer {
-    background: linear-gradient(
-        90deg,
-        var(--vert-raid) 0%,
-        var(--jaune-raid) 25%,
-        var(--rouge-raid) 50%,
-        var(--bleu-raid) 75%
-    );
-    color: #fff;
 }
