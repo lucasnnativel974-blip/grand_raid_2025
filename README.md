@@ -1,1 +1,1 @@
-Je me suis aidé du GPT pour écrire les lignes de code et je n'ai pas mis en ligne avec FileZilla car il y avait une page 404 (parce que j'avais décoché les droits d'accès, mais je ne savais pas que ça bloquait aussi sur le navigateur Web).
+Je me suis aidé du GPT pour écrire les lignes de code et je n'ai pas mis en ligne avec FileZilla car il y avait une page 404 (au final c'est parce que j'avais décoché les droits d'accès, mais je ne savais pas que ça bloquait aussi sur le navigateur Web).
